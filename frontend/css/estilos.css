@@ -1,0 +1,925 @@
+/* =======================================================
+   UTMEDIC - ARCHIVO DE ESUTILOS COMPLETO
+   ======================================================= */
+
+:root {
+    --color-primary: #30A7A6;
+    --color-primary-dark: #258584; 
+    --color-light: #F8FAFC;
+}
+
+/* --- ESTILOS GLOBALES --- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eef2f5;
+    overflow-x: hidden;
+}
+
+/* Variantes de Body para Login y Landing */
+body.landing-page {
+    background-color: var(--color-light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #333;
+}
+
+body.login-moderno {
+    background: linear-gradient(135deg, #30A7A6 0%, #87CEEB 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* =======================================================
+   1. LANDING PAGE
+   ======================================================= */
+.hero-background {
+    position: fixed; bottom: -5%; right: -5%; width: 55vw; height: 85vh;
+    background: linear-gradient(225deg, #007bff 0%, #30A7A6 50%, #20c997 100%);
+    border-top-left-radius: 100% 80%; border-bottom-left-radius: 20%;
+    filter: blur(120px); opacity: 0.95; z-index: -1; pointer-events: none;
+}
+.landing-header { padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 10; }
+.brand-logo-img { height: 65px; width: auto; object-fit: contain; }
+.nav-center { display: flex; gap: 1rem; }
+.nav-link-custom { text-decoration: none; color: var(--color-primary); font-weight: 600; padding: 0.6rem 1.2rem; border-radius: 8px; border: 1px solid transparent; transition: all 0.3s ease; }
+.nav-link-custom:hover { background-color: rgba(48, 167, 166, 0.1); border-color: var(--color-primary); }
+.auth-buttons { display: flex; gap: 1rem; }
+.btn-login-top { background-color: var(--color-primary); color: white; text-decoration: none; font-weight: 600; padding: 0.7rem 1.5rem; border-radius: 8px; transition: all 0.3s ease; border: none; }
+.btn-login-top:hover { background-color: var(--color-primary-dark); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(48, 167, 166, 0.3); color: white; }
+.btn-register-top { background-color: transparent; color: var(--color-primary); text-decoration: none; font-weight: 600; padding: 0.7rem 1.5rem; border-radius: 8px; transition: all 0.3s ease; border: 2px solid var(--color-primary); }
+.btn-register-top:hover { background-color: rgba(48, 167, 166, 0.1); }
+.hero-section { flex: 1; display: flex; align-items: center; padding: 4rem 3rem; position: relative; z-index: 5; }
+.hero-content { max-width: 650px; }
+.hero-title { font-size: 5rem; font-weight: 800; color: var(--color-primary); line-height: 1.1; margin-bottom: 1.5rem; }
+.hero-subtitle { font-size: 1.5rem; color: #475569; margin-bottom: 3rem; font-weight: 500; line-height: 1.6; }
+.hero-actions { display: flex; gap: 1rem; }
+.btn-hero-primary { background-color: var(--color-primary); color: white; font-weight: 700; padding: 1rem 2.5rem; border-radius: 10px; text-decoration: none; transition: all 0.3s ease; border: none; font-size: 1.1rem; }
+.btn-hero-primary:hover { background-color: var(--color-primary-dark); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(48, 167, 166, 0.3); color: white; }
+.btn-hero-secondary { background-color: transparent; color: var(--color-primary); font-weight: 700; padding: 1rem 2.5rem; border-radius: 10px; text-decoration: none; transition: all 0.3s ease; border: 2px solid var(--color-primary); font-size: 1.1rem; }
+.btn-hero-secondary:hover { background-color: rgba(48, 167, 166, 0.1); }
+
+/* =======================================================
+   2. LOGIN PAGE (INDEX)
+   ======================================================= */
+.card-split { border: none; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.25); background-color: #ffffff; }
+.left-side { background-color: #30A7A6; display: flex; align-items: center; justify-content: center; padding: 3rem; position: relative; }
+.logo-moderno { width: 250px; height: 250px; object-fit: cover; border-radius: 50%; border: 4px solid #ffffff; box-shadow: 0 0 25px rgba(255, 255, 255, 0.7), 0 10px 20px rgba(0,0,0,0.2); z-index: 2; }
+.right-side { padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center; }
+.login-title { color: #30A7A6; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 2.5rem; letter-spacing: 0.5px; }
+.input-wrapper { position: relative; margin-bottom: 1.5rem; }
+.input-wrapper i { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #30A7A6; font-size: 1.2rem; }
+.input-custom { border: 2px solid #e0e6e5; border-radius: 10px; padding: 1rem 1rem 1rem 3rem; width: 100%; background-color: #f8fafa; transition: all 0.3s ease; font-size: 1rem; }
+.input-custom:focus { outline: none; border-color: #30A7A6; background-color: #fff; box-shadow: 0 0 0 4px rgba(48, 167, 166, 0.1); }
+.btn-ingresar { background-color: #30A7A6; color: white; border: none; border-radius: 10px; padding: 1rem; font-weight: 600; font-size: 1.1rem; letter-spacing: 1px; transition: all 0.3s; }
+.btn-ingresar:hover { background-color: #258584; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(48, 167, 166, 0.3); color: white; }
+.btn-registrar { background-color: transparent; color: #30A7A6; border: 2px solid #30A7A6; border-radius: 10px; padding: 0.8rem; font-weight: 600; transition: all 0.3s; text-decoration: none; display: block; text-align: center; }
+.btn-registrar:hover { background-color: #30A7A6; color: white; }
+
+/* =======================================================
+   3. ESTRUCTURA PRINCIPAL (SIDEBAR, TOPBAR, WIDGETS)
+   ======================================================= */
+.sidebar { width: 260px; background-color: #30A7A6; color: white; position: fixed; top: 0; left: 0; height: 100vh; display: flex; flex-direction: column; box-shadow: 4px 0 15px rgba(0,0,0,0.1); z-index: 1000; }
+.sidebar-brand { padding: 2rem 1.5rem; font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 1rem; }
+.sidebar-nav { display: flex; flex-direction: column; gap: 5px; padding: 0 1rem; flex-grow: 1; }
+.sidebar-link { color: rgba(255,255,255,0.8); text-decoration: none; padding: 1rem 1.5rem; border-radius: 10px; display: flex; align-items: center; gap: 15px; font-weight: 500; font-size: 1.1rem; transition: all 0.3s ease; }
+.sidebar-link:hover, .sidebar-link.active { background-color: rgba(255,255,255,0.2); color: white; font-weight: 600; }
+.sidebar-footer { padding: 1.5rem 1rem; border-top: 1px solid rgba(255,255,255,0.1); }
+
+.main-content { margin-left: 260px; padding: 2rem; min-height: 100vh; }
+.topbar { display: flex; justify-content: space-between; align-items: center; background-color: white; padding: 1rem 2rem; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
+.topbar-rounded { background-color: #e2e8f0; border-radius: 50px; } 
+
+.page-title { font-weight: 700; color: #1e293b; margin: 0; font-size: 1.5rem; }
+.search-bar { background-color: white; border: none; border-radius: 30px; padding: 0.6rem 1.5rem; width: 300px; color: #64748b; outline: none; }
+.user-info { display: flex; align-items: center; gap: 15px; }
+.user-icon { background-color: #30A7A6; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+
+.widget { background-color: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #eef2f2; }
+.empty-state { text-align: center; padding: 4rem 2rem; background-color: white; border-radius: 20px; border: 1px dashed #cbd5e1; }
+
+/* =======================================================
+   4. COMPONENTES DEL DASHBOARD (MENÚ PRINCIPAL)
+   ======================================================= */
+/* TARJETA DE BIENVENIDA GRANDE */
+.welcome-widget { 
+    position: relative; 
+    overflow: hidden; 
+    padding: 0; 
+    border: none; 
+    min-height: 684px; 
+    display: flex; 
+    flex-direction: column; 
+    border-radius: 20px; 
+}
+.welcome-slider { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+.welcome-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.5s ease-in-out; }
+.welcome-slide.active { opacity: 1; }
+.welcome-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.2) 100%); z-index: 2; }
+.welcome-content { position: relative; z-index: 3; padding: 4rem 3rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+
+/* Calendario */
+.calendar-container { background-color: #f8fafc; border-radius: 15px; padding: 1.2rem; border: 1px solid #e2e8f0; text-align: center; margin-bottom: 1.5rem; flex-shrink: 0; }
+.calendar-header { display: flex; justify-content: space-between; align-items: center; font-weight: 700; margin-bottom: 10px; color: #1e293b; }
+.calendar-btn { background: none; border: none; color: #64748b; cursor: pointer; padding: 5px 10px; border-radius: 5px; transition: 0.2s; }
+.calendar-btn:hover { background-color: #e2e8f0; color: #30A7A6; }
+.calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; font-size: 0.85rem; }
+.cal-day { padding: 5px 0; color: #64748b; font-weight: 700; }
+.cal-date { padding: 8px 0; border-radius: 8px; font-weight: 600; color: #475569; display: flex; align-items: center; justify-content: center; }
+.cal-date.cal-active { background-color: #30A7A6; color: white; box-shadow: 0 2px 8px rgba(48, 167, 166, 0.4); }
+.cal-date:not(.empty):not(.cal-active):hover { background-color: #e2e8f0; cursor: pointer; }
+
+/* --- SLIDER MOTIVACIONAL --- */
+.motivational-container { 
+    display: flex; 
+    flex-direction: column;
+    overflow: hidden; 
+    border-radius: 15px; 
+    position: relative; 
+    flex-grow: 1; 
+    min-height: 260px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+}
+
+.motivational-track { 
+    display: flex; 
+    flex-grow: 1; 
+    width: 100%;
+    transition: transform 0.6s ease-in-out; 
+}
+
+.motivational-slide { 
+    min-width: 100%; 
+    display: flex; 
+    position: relative; 
+}
+
+.motivational-slide img { 
+    width: 100%; 
+    height: 100%; 
+    flex-grow: 1;
+    object-fit: cover; 
+    display: block; 
+}
+
+.motivational-text { 
+    position: absolute; 
+    bottom: 0; left: 0; right: 0; 
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); 
+    color: white; 
+    padding: 35px 10px 15px 10px; 
+    text-align: center; 
+    font-size: 0.9rem; 
+    font-weight: 500; 
+    margin: 0;
+}
+/* Tarjetas Admin y Citas Dashboard */
+.admin-card { transition: transform 0.2s, box-shadow 0.2s; }
+.admin-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+
+.appointments-widget { background-color: #f8fafc; margin-top: 1.5rem; padding: 1.5rem; border-radius: 20px;}
+.appt-card { background-color: #e05e36; color: white; border-radius: 15px; padding: 1.5rem; margin-right: 15px; min-width: 200px; }
+.appt-card h5 { font-weight: 700; margin-bottom: 0.5rem; }
+.appt-card p { margin-bottom: 0.2rem; font-size: 0.9rem; opacity: 0.9; }
+.appt-btn { background-color: rgba(255,255,255,0.2); color: white; border: none; padding: 5px 15px; border-radius: 8px; margin-top: 15px; font-size: 0.85rem; width: 100%; }
+
+/* =======================================================
+   5. FORMULARIOS, PERFIL Y BOTONES
+   ======================================================= */
+.form-label { font-weight: 600; color: #475569; font-size: 0.95rem; margin-bottom: 0.5rem; }
+.form-control, .form-select { border-radius: 10px; padding: 0.8rem 1rem; border: 1px solid #cbd5e1; background-color: #f8fafc; transition: all 0.3s; }
+.form-control:focus, .form-select:focus { background-color: #ffffff; border-color: #30A7A6; box-shadow: 0 0 0 3px rgba(48, 167, 166, 0.15); }
+.input-group-text { background-color: #f1f5f9; border: 1px solid #cbd5e1; border-right: none; border-radius: 10px 0 0 10px; color: #30A7A6; }
+.form-control.with-icon, .form-select.with-icon { border-left: none; border-radius: 0 10px 10px 0; }
+
+.section-title { color: #30A7A6; font-weight: 700; font-size: 1.1rem; margin-top: 2rem; margin-bottom: 1.5rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.5rem; }
+.current-photo { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 4px solid #30A7A6; box-shadow: 0 0 20px rgba(48, 167, 166, 0.5); }
+
+/* Botones Principales unificados con nombres únicos para no chocar */
+.btn-guardar, .btn-nuevo, .btn-agendar-verde { background-color: #30A7A6; color: white; font-weight: 600; padding: 0.8rem 2.5rem; border-radius: 10px; border: none; transition: all 0.3s; }
+.btn-guardar:hover, .btn-nuevo:hover, .btn-agendar-verde:hover { background-color: #258584; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(48, 167, 166, 0.3); color: white; }
+
+.btn-agendar-naranja { background-color: #d97706; color: white; font-weight: 600; padding: 0.8rem 2.5rem; border-radius: 10px; border: none; transition: all 0.3s; width: 100%; font-size: 1.1rem; }
+.btn-agendar-naranja:hover { background-color: #b45309; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(217, 119, 6, 0.3); color: white; }
+
+.btn-finalizar { background-color: #10b981; color: white; font-weight: 600; padding: 0.8rem 1.5rem; border-radius: 10px; border: none; transition: all 0.3s; width: 100%; }
+.btn-finalizar:hover { background-color: #059669; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3); color: white; }
+
+.btn-cancelar-rojo { background-color: #fff1f2; color: #e11d48; border: 1px solid #fecdd3; padding: 0.8rem 1rem; border-radius: 10px; transition: all 0.3s; }
+.btn-cancelar-rojo:hover { background-color: #ffe4e6; color: #be123c; }
+
+.btn-volver-gris { background-color: #f1f5f9; color: #475569; font-weight: 600; padding: 0.8rem 2.5rem; border-radius: 10px; border: none; transition: all 0.3s; text-decoration: none; display: block; text-align: center; width: 100%; font-size: 1.1rem;}
+.btn-volver-gris:hover { background-color: #e2e8f0; color: #334155; }
+
+/* =======================================================
+   6. TABLAS, BADGES Y KPIS (MÓDULO ADMIN Y CITAS)
+   ======================================================= */
+.table-custom th { background-color: #f8fafc; color: #475569; font-weight: 600; padding: 1rem; border-bottom: 2px solid #e2e8f0; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; }
+.table-custom td { padding: 1rem; vertical-align: middle; color: #334155; border-bottom: 1px solid #f1f5f9; font-weight: 500; }
+
+.badge-rol { padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; background-color: #f1f5f9; color: #475569; }
+.rol-medico { background-color: #e0f2fe; color: #0284c7; } 
+.rol-psicologo { background-color: #f3e8ff; color: #7e22ce; } 
+.rol-nutriologo { background-color: #ffedd5; color: #ea580c; } 
+.rol-admin { background-color: #30A7A6; color: white; } 
+
+.badge-estado { padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.85rem; font-weight: 600; }
+.estado-programada { background-color: #e0f2fe; color: #0284c7; }
+.estado-atendida, .badge-success { background-color: #dcfce7; color: #16a34a; }
+.estado-cancelada, .badge-danger { background-color: #fee2e2; color: #dc2626; }
+.badge-warning { background-color: #fffbeb; color: #d97706; }
+.badge-motivo { background-color: #e0f2fe; color: #0284c7; font-weight: 600; padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.85rem; display: inline-block; }
+
+.kpi-card { background-color: white; border-radius: 20px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #eef2f2; display: flex; align-items: center; gap: 1rem; transition: transform 0.2s; height: 100%; }
+.kpi-card:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.06); }
+.kpi-icon { width: 50px; height: 50px; border-radius: 12px; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; }
+.kpi-title { font-size: 0.9rem; font-weight: 600; color: #64748b; margin-bottom: 0.2rem; }
+.kpi-value { font-size: 1.8rem; font-weight: 800; color: #1e293b; line-height: 1; }
+
+.icon-total { background-color: #e0f2fe; color: #0284c7; }
+.icon-atendidas { background-color: #dcfce7; color: #16a34a; }
+.icon-canceladas { background-color: #fee2e2; color: #dc2626; }
+.icon-pendientes { background-color: #fef3c7; color: #d97706; }
+
+.progress-custom { height: 8px; border-radius: 10px; background-color: #e2e8f0; overflow: hidden; }
+.progress-bar-custom { background-color: #30A7A6; border-radius: 10px; }
+
+/* Atender Cita Específico */
+.patient-card { background-color: white; border-radius: 20px; padding: 2rem; margin-bottom: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #eef2f2; transition: transform 0.2s; }
+.patient-card:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.06); }
+.patient-photo { width: 75px; height: 75px; object-fit: cover; border-radius: 50%; border: 3px solid #f1f5f9; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.btn-expediente { font-weight: 600; font-size: 0.85rem; padding: 0.4rem 0.8rem; border-radius: 8px; }
+
+/* Botones de tabla */
+.btn-accion { padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.9rem; font-weight: 600; transition: all 0.2s; border: none; }
+.btn-editar { background-color: #f1f5f9; color: #475569; }
+.btn-editar:hover { background-color: #e2e8f0; color: #1e293b; }
+.btn-eliminar { background-color: #fff1f2; color: #e11d48; }
+.btn-eliminar:hover { background-color: #ffe4e6; color: #be123c; }
+.btn-reagendar { background-color: #fffbeb; color: #d97706; border: 1px solid #fde68a; }
+.btn-reagendar:hover { background-color: #fef3c7; color: #b45309; }
+
+/* =======================================================
+   7. MEDIA QUERIES (RESPONSIVE)
+   ======================================================= */
+@media (max-width: 992px) {
+    .landing-header { padding: 1.5rem; }
+    .nav-center { display: none; }
+    .hero-title { font-size: 3.5rem; }
+    .hero-background { width: 70vw; height: 60vh; }
+}
+
+@media (max-width: 991px) {
+    .sidebar { transform: translateX(-100%); }
+    .main-content { margin-left: 0; width: 100%; }
+    .welcome-widget { min-height: 350px; } 
+    .motivational-container { min-height: 200px; } 
+}
+
+@media (max-width: 768px) {
+    .landing-header { flex-wrap: wrap; gap: 1rem; }
+    .auth-buttons { width: 100%; justify-content: space-between; }
+    .btn-login-top, .btn-register-top { flex: 1; text-align: center; }
+    .hero-section { padding: 3rem 1.5rem; text-align: center; justify-content: center; }
+    .hero-content { margin: 0 auto; }
+    .hero-title { font-size: 2.8rem; }
+    .hero-subtitle { font-size: 1.2rem; }
+    .hero-actions { flex-direction: column; }
+    .btn-hero-primary, .btn-hero-secondary { width: 100%; }
+    .hero-background { width: 100vw; height: 40vh; border-top-left-radius: 50% 100%; }
+}
+
+/* ==========================================
+   MODO OSCURO global
+   ========================================== */
+body.dark-mode, 
+body.dark-mode .main-content {
+    background-color: #0b1121 !important;
+    color: #e2e8f0 !important;
+}
+body.dark-mode .widget, 
+body.dark-mode .calendar-container {
+    background-color: #1e293b !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+body.dark-mode .text-dark,
+body.dark-mode #saludo-nombre,
+body.dark-mode .welcome-content p,
+body.dark-mode #monthYear,
+body.dark-mode #topbar-nombre,
+body.dark-mode .calendar-btn {
+    color: #f8fafc !important;
+}
+body.dark-mode .text-muted,
+body.dark-mode #topbar-rol,
+body.dark-mode .form-label {
+    color: #94a3b8 !important;
+}
+body.dark-mode .badge.bg-light {
+    background-color: #334155 !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}
+body.dark-mode input.search-bar {
+    background-color: #1e293b !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+}
+body.dark-mode input.search-bar::placeholder {
+    color: #64748b !important;
+}
+
+/* Formularios (Agendar / Reagendar) */
+body.dark-mode .form-control,
+body.dark-mode .form-select,
+body.dark-mode textarea {
+    background-color: #1e293b !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+body.dark-mode .input-group-text {
+    background-color: #0b1121 !important;
+    color: #94a3b8 !important;
+    border-color: #334155 !important;
+}
+body.dark-mode .bg-white {
+    background-color: #0b1121 !important;
+}
+body.dark-mode .border-white {
+    border-color: #334155 !important;
+}
+
+/* Menú Desplegable de la Sidebar */
+body.dark-mode .sidebar-footer .btn {
+    background-color: #1e293b !important;
+    color: #e2e8f0 !important;
+    border: 1px solid #334155 !important;
+}
+body.dark-mode .dropdown-menu {
+    background-color: #1e293b !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6) !important;
+}
+body.dark-mode .dropdown-item {
+    color: #e2e8f0 !important;
+}
+body.dark-mode .dropdown-item:hover {
+    background-color: #334155 !important;
+    color: #ffffff !important;
+}
+body.dark-mode .dropdown-divider {
+    border-top-color: #334155 !important;
+}
+
+/* Calendario */
+body.dark-mode .cal-day { color: #94a3b8 !important; }
+body.dark-mode .cal-date { color: #e2e8f0 !important; }
+body.dark-mode .cal-date:hover {
+    background-color: #334155 !important;
+    color: #ffffff !important;
+}
+body.dark-mode .cal-active {
+    background-color: #30A7A6 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 10px rgba(48, 167, 166, 0.4) !important;
+}
+body.dark-mode .welcome-overlay {
+    background: linear-gradient(to right, rgba(11, 17, 33, 0.95) 0%, rgba(11, 17, 33, 0.3) 100%) !important;
+}
+
+/* ==========================================
+   ADAPTACIÓN DE FILTROS A MODO OSCURO
+   ========================================== */
+/* Asegurar que las etiquetas 'Desde:', 'Hasta:', etc., brillen en oscuro */
+body.dark-mode .widget .form-label.text-muted {
+    color: #94a3b8 !important; /* Gris claro legible */
+}
+
+/* Arreglo de los inputs y selects 'bg-light border-0' dentro del widget en oscuro */
+body.dark-mode .widget .bg-light.border-0 {
+    background-color: #334155 !important; /* Gris pizarra elegante en lugar del negro profundo */
+    color: #f8fafc !important; /* Texto blanco */
+}
+
+/* Iconos dentro de las cajitas de los filtros */
+body.dark-mode .widget .input-group-text.bg-light i {
+    color: #30A7A6 !important; /* Turquesa UTMedic */
+}
+
+/* Botón Limpiar filtros en oscuro */
+body.dark-mode .btn-outline-secondary {
+    color: #94a3b8 !important;
+    border-color: #475569 !important;
+}
+body.dark-mode .btn-outline-secondary:hover {
+    background-color: #334155 !important;
+    color: #ffffff !important;
+}
+
+/* ==========================================
+   CORRECCIONES MODO OSCURO (AGENDAR / REAGENDAR)
+   ========================================== */
+
+/* Títulos principales y subtítulos de los formularios */
+body.dark-mode .page-title,
+body.dark-mode .widget h4,
+body.dark-mode .widget h5,
+body.dark-mode .widget h6 {
+    color: #f8fafc !important;
+}
+
+/* Textos pequeños y descriptivos */
+body.dark-mode p.text-muted.small,
+body.dark-mode .small.text-muted {
+    color: #94a3b8 !important;
+}
+
+/* Arreglo del bloque blanco enorme en el Resumen */
+body.dark-mode .bg-light.rounded-4.p-3 {
+    background-color: #0b1121 !important; /* Se vuelve azul noche profundo */
+    border-color: #334155 !important; /* Borde sutil */
+}
+
+/* 4. Arreglo de los cuadritos de los iconos (Calendario, Reloj, Estetoscopio) */
+body.dark-mode .bg-white.rounded.p-2.text-secondary {
+    background-color: #1e293b !important; /* Fondo gris pizarra */
+    color: #30A7A6 !important; /* Iconos en color turquesa UTMedic */
+    box-shadow: none !important;
+}
+
+/* 5. Íconos decorativos grandes junto a los títulos */
+body.dark-mode .widget .fs-3.text-secondary {
+    color: #30A7A6 !important;
+}
+body.dark-mode .form-control::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #94a3b8 !important; /* Un tono gris claro legible */
+    opacity: 0.8 !important;
+}
+body.dark-mode .table {
+    color: #e2e8f0 !important;
+    background-color: transparent !important;
+}
+
+/* 2. Celdas y encabezados (Quitar el fondo blanco y arreglar bordes) */
+body.dark-mode .table th,
+body.dark-mode .table td,
+body.dark-mode .table thead th {
+    background-color: transparent !important; 
+    border-color: #334155 !important; /* Líneas divisorias en gris oscuro */
+    color: #f8fafc !important; /* Texto principal en blanco */
+}
+
+/* 3. Textos secundarios dentro de la tabla (Especialidad y observaciones en cursiva) */
+body.dark-mode .table td .text-muted,
+body.dark-mode .table td span[style*="color: gray"],
+body.dark-mode .table td i {
+    color: #94a3b8 !important; /* Gris claro para que no resalte tanto como el nombre */
+}
+
+/* 4. Si tu tabla tiene efecto "Hover" (que cambia al pasar el mouse) o rayas (Striped) */
+body.dark-mode .table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: rgba(255, 255, 255, 0.02) !important; 
+    color: #f8fafc !important;
+}
+body.dark-mode .table-hover > tbody > tr:hover > * {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: #ffffff !important;
+}
+body.dark-mode input[type="file"] {
+    background-color: #1e293b !important;
+    color: #94a3b8 !important;
+    border-color: #334155 !important;
+}
+
+/* 2. Estilo específico del botón "Seleccionar archivo" dentro del input */
+body.dark-mode input[type="file"]::file-selector-button {
+    background-color: #334155 !important; /* Fondo gris oscuro */
+    color: #f8fafc !important; /* Texto blanco */
+    border: none !important;
+    border-right: 1px solid #475569 !important; /* Línea separadora */
+    margin-right: 10px;
+    transition: background-color 0.2s;
+}
+
+/* 3. Efecto al pasar el mouse por encima del botón */
+body.dark-mode input[type="file"]::file-selector-button:hover {
+    background-color: #475569 !important;
+}
+/* 1. Recuadro de la fecha: restaurar su transparencia para que tome el color de la tarjeta */
+body.dark-mode #contenido-dinamico-rol .bg-white:not(.btn),
+body.dark-mode #contenido-dinamico-rol .bg-dark {
+    background-color: rgba(255, 255, 255, 0.25) !important; /* Blanco semi-transparente */
+    color: #ffffff !important;
+}
+
+/* 2. Botón "Revisar Detalles": cambiar de blanco a un oscuro elegante */
+body.dark-mode #contenido-dinamico-rol .btn.bg-white,
+body.dark-mode #contenido-dinamico-rol .btn-light {
+    background-color: #1e293b !important; /* Fondo gris pizarra oscuro */
+    color: #f8fafc !important; /* Letras blancas */
+    border: 1px solid rgba(255, 255, 255, 0.2) !important; /* Borde sutil */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3) !important;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+body.dark-mode #contenido-dinamico-rol .btn.bg-white:hover,
+body.dark-mode #contenido-dinamico-rol .btn-light:hover {
+    background-color: #0b1121 !important; /* Azul noche más profundo */
+    color: #30A7A6 !important; /* Letras turquesa al hacer hover */
+}
+body.dark-mode #contenido-dinamico-rol .bg-dark,
+body.dark-mode #contenido-dinamico-rol .badge.bg-dark {
+    background-color: rgba(255, 255, 255, 0.25) !important; 
+    color: #ffffff !important;
+}
+
+/* Botón "Revisar Detalles": de blanco a oscuro elegante */
+body.dark-mode #contenido-dinamico-rol .btn.bg-white,
+body.dark-mode #contenido-dinamico-rol .btn-light {
+    background-color: #0b1121 !important; /* Azul noche profundo */
+    color: #e2e8f0 !important; /* Letras grises claras */
+    border: none !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3) !important;
+}
+
+/* Efecto al pasar el mouse por "Revisar Detalles" */
+body.dark-mode #contenido-dinamico-rol .btn.bg-white:hover,
+body.dark-mode #contenido-dinamico-rol .btn-light:hover {
+    background-color: #1e293b !important; /* Pizarra oscuro */
+    color: #ffffff !important; 
+}
+
+
+/* --- 2. MODAL "DETALLES DE LA CITA" (Tinta invisible) --- */
+/* Fondo completo de la ventana emergente */
+body.dark-mode .modal-content {
+    background-color: #1e293b !important; /* Gris pizarra oscuro */
+    border: 1px solid #334155 !important;
+}
+
+/* Letras del nombre del doctor y etiquetas */
+body.dark-mode .modal-body h4,
+body.dark-mode .modal-body h5,
+body.dark-mode .modal-body .fw-bold {
+    color: #f8fafc !important; /* Blanco brillante */
+}
+
+/* Profesión del doctor (Médico General, etc.) */
+body.dark-mode .modal-body .text-muted {
+    color: #94a3b8 !important; /* Gris claro legible */
+}
+
+/* Cajitas interiores de la Fecha, Hora, Motivo y Notas */
+body.dark-mode .modal-body .bg-light,
+body.dark-mode .modal-body .bg-white,
+body.dark-mode .modal-body .shadow-sm {
+    background-color: #0b1121 !important; /* Azul noche profundo */
+    border: 1px solid #334155 !important; /* Borde sutil */
+    color: #e2e8f0 !important;
+    box-shadow: none !important;
+}
+
+/* Iconos dentro de las cajitas del modal */
+body.dark-mode .modal-body i.text-secondary,
+body.dark-mode .modal-body i.text-muted {
+    color: #30A7A6 !important; /* Color Turquesa UTMedic */
+}
+
+/* Separador del modal (si tiene footer) */
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+    border-color: #334155 !important;
+}
+body.dark-mode .modal-footer {
+    background-color: #1e293b !important; /* Se fusiona con el resto del modal (Pizarra) */
+    border-top: 1px solid #334155 !important; /* Línea divisoria sutil */
+}
+
+/* 2. El recuadro de "Tus Notas / Observaciones" que se quedó blanco */
+body.dark-mode .modal-body .border-start,
+body.dark-mode .modal-body .bg-white {
+    background-color: #0b1121 !important; /* Azul noche profundo */
+    color: #e2e8f0 !important; /* Letras claras */
+}
+
+/* 3. Asegurar que el texto dentro de las notas sea visible */
+body.dark-mode .modal-body .border-start p,
+body.dark-mode .modal-body .border-start div {
+    color: #94a3b8 !important;
+}
+body.dark-mode .modal-content .modal-body .border-start,
+body.dark-mode .modal-content .modal-body .bg-white,
+body.dark-mode .modal-content .modal-body .bg-light,
+body.dark-mode .modal-content .modal-body div[style*="background"],
+body.dark-mode .modal-content .modal-body textarea {
+    background-color: #0b1121 !important; /* Fondo azul noche */
+    color: #e2e8f0 !important; /* Letras claras */
+}
+
+/* Forzar que cualquier texto dentro de esa caja sea visible */
+body.dark-mode .modal-content .modal-body .border-start *,
+body.dark-mode .modal-content .modal-body textarea::placeholder {
+    color: #94a3b8 !important; /* Gris claro para el texto "Tus notas / Observaciones" */
+}
+/* ==========================================
+   CORRECCIONES MODO OSCURO (ATENDER CITAS) - DEFINITIVO
+   ========================================== */
+
+/* 1. Fondo de la tarjeta principal (por si acaso) y textos */
+body.dark-mode .patient-card {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+body.dark-mode .patient-card .text-dark,
+body.dark-mode .patient-card h4,
+body.dark-mode .patient-card h5,
+body.dark-mode .patient-card .fw-bold {
+    color: #f8fafc !important; /* Textos blancos */
+}
+
+body.dark-mode .patient-card .text-muted,
+body.dark-mode .patient-card .text-secondary,
+body.dark-mode .patient-card i[style*="color"] {
+    color: #94a3b8 !important; /* Textos secundarios grises */
+}
+
+/* 2. CAJA DE FECHA (¡Ahora sí, adiós blanco!) */
+body.dark-mode .patient-card .bg-white,
+body.dark-mode .patient-card .bg-light,
+body.dark-mode .patient-card div[style*="background"] {
+    background-color: #0b1121 !important; /* Azul noche profundo */
+    border: 1px solid #334155 !important;
+    box-shadow: none !important;
+}
+
+/* Forzar que "FECHA" y el número brillen */
+body.dark-mode .patient-card .bg-white *,
+body.dark-mode .patient-card .bg-light *,
+body.dark-mode .patient-card div[style*="background"] * {
+    color: #f8fafc !important;
+}
+
+/* 3. RESCATE DE LA PASTILLA DE SÍNTOMAS */
+body.dark-mode .patient-card .text-info,
+body.dark-mode .patient-card .bg-info,
+body.dark-mode .patient-card .rounded-pill,
+body.dark-mode .patient-card div[class*="bg-opacity-"] {
+    background-color: rgba(56, 189, 248, 0.15) !important; /* Azulito transparente */
+    color: #38bdf8 !important; /* Letras celestes */
+    border: 1px solid rgba(56, 189, 248, 0.3) !important;
+}
+
+/* Forzar el icono de la pastilla a celeste */
+body.dark-mode .patient-card .text-info *,
+body.dark-mode .patient-card .rounded-pill * {
+    color: #38bdf8 !important;
+}
+
+/* 4. Botón "Ver Expediente" */
+body.dark-mode .patient-card .btn-outline-dark,
+body.dark-mode .patient-card .btn-outline-secondary {
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}
+body.dark-mode .patient-card .btn-outline-dark:hover,
+body.dark-mode .patient-card .btn-outline-secondary:hover {
+    background-color: #334155 !important;
+    color: #ffffff !important;
+}
+
+/* 5. Área de "Diagnóstico / Receta Médica" */
+body.dark-mode .patient-card textarea {
+    background-color: #0b1121 !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+}
+/* ==========================================
+   CORRECCIONES MODO OSCURO (MÉTRICAS Y REPORTES)
+   ========================================== */
+
+/* 1. Tarjetas Superiores (KPI Cards) */
+body.dark-mode .kpi-card {
+    background-color: #1e293b !important; /* Gris pizarra oscuro */
+    border: 1px solid #334155 !important;
+    box-shadow: none !important;
+}
+
+/* Textos dentro de las tarjetas KPI */
+body.dark-mode .kpi-title {
+    color: #94a3b8 !important; /* Subtítulo gris claro */
+}
+body.dark-mode .kpi-value {
+    color: #f8fafc !important; /* Números grandes en blanco brillante */
+}
+
+/* 2. Colores de los Íconos en las tarjetas */
+body.dark-mode .icon-total { background-color: rgba(2, 132, 199, 0.2) !important; color: #38bdf8 !important; }
+body.dark-mode .icon-atendidas { background-color: rgba(22, 163, 74, 0.2) !important; color: #4ade80 !important; }
+body.dark-mode .icon-canceladas { background-color: rgba(220, 38, 38, 0.2) !important; color: #f87171 !important; }
+body.dark-mode .icon-pendientes { background-color: rgba(217, 119, 6, 0.2) !important; color: #fbbf24 !important; }
+
+
+body.dark-mode .table td .bg-white.text-success, 
+body.dark-mode .table td .border-success {
+    background-color: rgba(22, 163, 74, 0.15) !important;
+    color: #4ade80 !important; /* brillante */
+    border-color: rgba(22, 163, 74, 0.3) !important;
+}
+
+body.dark-mode .table td .bg-white.text-danger, 
+body.dark-mode .table td .border-danger {
+    background-color: rgba(220, 38, 38, 0.15) !important;
+    color: #f87171 !important; /* brillante */
+    border-color: rgba(220, 38, 38, 0.3) !important;
+}
+
+body.dark-mode .table td .bg-white.text-warning, 
+body.dark-mode .table td .border-warning {
+    background-color: rgba(217, 119, 6, 0.15) !important;
+    color: #fbbf24 !important; /* brillante */
+    border-color: rgba(217, 119, 6, 0.3) !important;
+}
+
+body.dark-mode .table td .bg-white,
+body.dark-mode .table td .bg-light {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+    color: #f8fafc !important;
+}
+
+/* 4. Barra de progreso (Tasa de eficiencia) */
+body.dark-mode .progress-custom {
+    background-color: #334155 !important; /* Fondo de la barra en oscuro */
+}
+body.dark-mode .progress-bar-custom {
+    background-color: #30A7A6 !important; /* Color de la barra llenada */
+}
+/* ==========================================
+   CORRECCIÓN: ENCABEZADO DE LOS MODALES (Expediente)
+   ========================================== */
+
+/* 1. Fondo del encabezado del modal */
+body.dark-mode .modal-header,
+body.dark-mode .modal-header.bg-white,
+body.dark-mode .modal-header.bg-light {
+    background-color: #1e293b !important; /* Color gris pizarra */
+    border-bottom: 1px solid #334155 !important; /* Línea divisoria sutil */
+}
+
+body.dark-mode .modal-header *,
+body.dark-mode .modal-header h5,
+body.dark-mode .modal-header .modal-title {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .modal-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%) !important;
+}
+
+/* ==========================================
+   TOPBAR EN MODO OSCURO
+   ========================================== */
+
+body.dark-mode .topbar {
+    background-color: #1e293b !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* CORRECCIÓN DEL BUSCADOR EN VIVO (MODO OSCURO) */
+body.dark-mode .topbar .input-group {
+    border: none !important; 
+    background-color: #0b1121 !important; /* Gris muy oscuro, liso y sin bordes */
+    border-radius: 50px !important;
+    box-shadow: none !important;
+}
+
+body.dark-mode .topbar .input-group-text,
+body.dark-mode .topbar #buscador-global {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #e2e8f0 !important; 
+}
+
+body.dark-mode .topbar .input-group-text i {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .topbar #buscador-global::placeholder {
+    color: #64748b !important;
+}
+
+
+/* ==========================================
+   ESTILOS DEL BUSCADOR EN VIVO
+   ========================================== */
+.search-results-box {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.search-result-item {
+    color: #334155 !important;
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.2s ease;
+}
+
+.search-result-item:hover {
+    background-color: #f8fafc;
+}
+
+/* --- Adaptación al Modo Oscuro --- */
+body.dark-mode .search-results-box {
+    background-color: #1e293b; /* Color azul oscuro de tus tarjetas */
+    border: 1px solid #334155;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .search-result-item {
+    color: #f8fafc !important; /* Texto blanco */
+    border-bottom: 1px solid #334155;
+}
+
+body.dark-mode .search-result-item:hover {
+    background-color: #334155; /* Efecto hover en oscuro */
+}
+
+body.dark-mode .search-result-item .badge.bg-light {
+    background-color: #0f172a !important; /* Fondo de la etiqueta oscuro */
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+body.dark-mode .search-result-item .text-muted {
+    color: #94a3b8 !important; /* Gris claro para el texto secundario */
+}
+
+/* ==========================================
+   FLECHA DE LOS SELECTS EN MODO OSCURO
+   ========================================== */
+body.dark-mode .form-select {
+    
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23f8fafc' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+}
+
+/* ==========================================
+   ESTILOS DEL CALENDARIO AVANZADO (FLATPICKR)
+   ========================================== */
+/* Pintar el día seleccionado del Verde UTMedic */
+.flatpickr-day.selected, 
+.flatpickr-day.startRange, 
+.flatpickr-day.endRange, 
+.flatpickr-day.selected.inRange, 
+.flatpickr-day.startRange.inRange, 
+.flatpickr-day.endRange.inRange, 
+.flatpickr-day.selected:focus, 
+.flatpickr-day.startRange:focus, 
+.flatpickr-day.endRange:focus, 
+.flatpickr-day.selected:hover, 
+.flatpickr-day.startRange:hover, 
+.flatpickr-day.endRange:hover, 
+.flatpickr-day.selected.prevMonthDay, 
+.flatpickr-day.startRange.prevMonthDay, 
+.flatpickr-day.endRange.prevMonthDay, 
+.flatpickr-day.selected.nextMonthDay, 
+.flatpickr-day.startRange.nextMonthDay, 
+.flatpickr-day.endRange.nextMonthDay {
+    background: #30A7A6 !important;
+    border-color: #30A7A6 !important;
+}
+
+/* Días bloqueados (Fines de semana o pasados) */
+.flatpickr-day.flatpickr-disabled,
+.flatpickr-day.flatpickr-disabled:hover {
+    color: #cbd5e1 !important;
+    background: transparent !important;
+}
+
+/* --- Adaptación a Modo Oscuro --- */
+body.dark-mode .flatpickr-calendar {
+    background: #1e293b !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5) !important;
+}
+body.dark-mode .flatpickr-day {
+    color: #f8fafc !important;
+}
+body.dark-mode .flatpickr-day:hover {
+    background: #334155 !important;
+}
+body.dark-mode .flatpickr-day.flatpickr-disabled {
+    color: #475569 !important; /* Fines de semana muy oscuros para indicar bloqueo */
+}
+body.dark-mode .flatpickr-month,
+body.dark-mode .flatpickr-current-month .flatpickr-monthDropdown-months,
+body.dark-mode .flatpickr-weekday {
+    color: #f8fafc !important;
+    fill: #f8fafc !important;
+}

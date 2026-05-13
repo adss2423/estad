@@ -1,0 +1,66 @@
+{
+  "lists": [
+    {
+      "id": "db1be4d5-a96e-40ac-8f74-c864e7662569",
+      "title": "Backlog",
+      "cards": [
+        {
+          "id": "de462347-6d12-4d0d-8abd-954da4dc1907",
+          "listId": "db1be4d5-a96e-40ac-8f74-c864e7662569",
+          "title": "Base de datos",
+          "description": "Diseño pantalla de login",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        }
+      ]
+    },
+    {
+      "id": "15b4b3cd-bea5-42c2-8f80-da3692c41a8d",
+      "title": "To Do",
+      "cards": [
+        {
+          "id": "c27010a3-f343-47ab-ad04-130983eed63a",
+          "listId": "15b4b3cd-bea5-42c2-8f80-da3692c41a8d",
+          "title": "Login",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "b2e92778-53c8-4438-828f-244b51e22100",
+          "listId": "15b4b3cd-bea5-42c2-8f80-da3692c41a8d",
+          "title": "Extracción de datos de la pagina de Facebook",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        }
+      ]
+    },
+    {
+      "id": "a1b0e269-43ec-4f1e-9881-3a68362ac41c",
+      "title": "Doing",
+      "cards": []
+    },
+    {
+      "id": "79d4f46c-15e4-4c8e-9873-f892f8a57d62",
+      "title": "Done",
+      "cards": []
+    }
+  ],
+  "archive": {
+    "lists": [],
+    "cards": []
+  },
+  "settings": {
+    "labels": [
+      {
+        "id": "667c853f-91f0-4108-8260-7f435fd05312",
+        "title": "",
+        "color": "#eb5a46"
+      }
+    ]
+  }
+}
