@@ -3,17 +3,7 @@
     {
       "id": "db1be4d5-a96e-40ac-8f74-c864e7662569",
       "title": "Backlog",
-      "cards": [
-        {
-          "id": "de462347-6d12-4d0d-8abd-954da4dc1907",
-          "listId": "db1be4d5-a96e-40ac-8f74-c864e7662569",
-          "title": "Base de datos",
-          "description": "Diseño pantalla de login",
-          "labels": [],
-          "checkboxes": [],
-          "comments": []
-        }
-      ]
+      "cards": []
     },
     {
       "id": "15b4b3cd-bea5-42c2-8f80-da3692c41a8d",
@@ -29,9 +19,9 @@
           "comments": []
         },
         {
-          "id": "b2e92778-53c8-4438-828f-244b51e22100",
+          "id": "4fc60972-e1b5-4d7e-9751-b0799b779665",
           "listId": "15b4b3cd-bea5-42c2-8f80-da3692c41a8d",
-          "title": "Extracción de datos de la pagina de Facebook",
+          "title": "Interfaz semanas",
           "description": "",
           "labels": [],
           "checkboxes": [],
@@ -42,7 +32,32 @@
     {
       "id": "a1b0e269-43ec-4f1e-9881-3a68362ac41c",
       "title": "Doing",
-      "cards": []
+      "cards": [
+        {
+          "id": "b2e92778-53c8-4438-828f-244b51e22100",
+          "listId": "a1b0e269-43ec-4f1e-9881-3a68362ac41c",
+          "title": "Extracción de datos de la pagina de Facebook",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "de462347-6d12-4d0d-8abd-954da4dc1907",
+          "listId": "a1b0e269-43ec-4f1e-9881-3a68362ac41c",
+          "title": "Base de datos",
+          "description": "base de datos relacional",
+          "labels": [],
+          "checkboxes": [
+            {
+              "id": "a0103808-08a1-4ec0-8b08-3c920afd5281",
+              "title": "estadísticas diarias",
+              "checked": true
+            }
+          ],
+          "comments": []
+        }
+      ]
     },
     {
       "id": "79d4f46c-15e4-4c8e-9873-f892f8a57d62",
