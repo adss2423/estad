@@ -8,10 +8,121 @@
     {
       "id": "15b4b3cd-bea5-42c2-8f80-da3692c41a8d",
       "title": "To Do",
+      "cards": []
+    },
+    {
+      "id": "a1b0e269-43ec-4f1e-9881-3a68362ac41c",
+      "title": "Doing",
+      "cards": []
+    },
+    {
+      "id": "79d4f46c-15e4-4c8e-9873-f892f8a57d62",
+      "title": "Done",
       "cards": [
         {
+          "id": "5310f7f1-7fd1-45ab-b55d-870a3cecb514",
+          "listId": "79d4f46c-15e4-4c8e-9873-f892f8a57d62",
+          "title": "Modo oscuro",
+          "description": "Toda la página con tema oscuro, también las cards y cambiar los colores de los charts",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "b1263e47-8e0b-415f-84e1-62c99b1236cb",
+          "listId": "79d4f46c-15e4-4c8e-9873-f892f8a57d62",
+          "title": "Exportar PDF",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "b03da2c8-8a7e-4dac-b9c6-0f2edb13c5d9",
+          "listId": "79d4f46c-15e4-4c8e-9873-f892f8a57d62",
+          "title": "API de respaldo para facebook",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "608360b2-64fc-4c55-be87-0421cacbd81b",
+          "listId": "79d4f46c-15e4-4c8e-9873-f892f8a57d62",
+          "title": "Script para asegurar la recoleccion: si una api falla se usa otra",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "7b36abe3-e794-47ba-aa48-e377d0a56d33",
+          "listId": "79d4f46c-15e4-4c8e-9873-f892f8a57d62",
+          "title": "Página YouTube",
+          "description": "",
+          "labels": [],
+          "checkboxes": [
+            {
+              "id": "c16ab7ae-9f4b-4497-aa51-179b6de5c2f8",
+              "title": "Suscriptores",
+              "checked": true
+            },
+            {
+              "id": "5465fad5-4477-4d05-9149-2c7ab9fc129e",
+              "title": "Vistas",
+              "checked": true
+            }
+          ],
+          "comments": []
+        },
+        {
+          "id": "90774f93-8724-44c9-ba49-1151070e6ac4",
+          "listId": "79d4f46c-15e4-4c8e-9873-f892f8a57d62",
+          "title": "Extracción de datos de la página de YouTube",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "f437ddcd-527f-47be-96fe-0176e3e7b209",
+          "listId": "79d4f46c-15e4-4c8e-9873-f892f8a57d62",
+          "title": "Estado de los scraper",
+          "description": "Tarjeta que muestra si funcionó el scraper correctamente la última vez que se usó, tambien muestra la última vez que se hizo un registro",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "df9b5220-dd28-48fb-9c6b-0e8ef4158edc",
+          "listId": "79d4f46c-15e4-4c8e-9873-f892f8a57d62",
+          "title": "Página X",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "9a55e276-cee8-4ec2-a5bd-c5e6cdb1ca9d",
+          "listId": "79d4f46c-15e4-4c8e-9873-f892f8a57d62",
+          "title": "Extracción de datos de la página de X",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "3893c883-bbdc-40e2-b0a9-149f985e56c7",
+          "listId": "79d4f46c-15e4-4c8e-9873-f892f8a57d62",
+          "title": "Salvavidas recolección con servidor apagado",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
           "id": "c27010a3-f343-47ab-ad04-130983eed63a",
-          "listId": "15b4b3cd-bea5-42c2-8f80-da3692c41a8d",
+          "listId": "79d4f46c-15e4-4c8e-9873-f892f8a57d62",
           "title": "Login",
           "description": "",
           "labels": [],
@@ -19,23 +130,35 @@
           "comments": []
         },
         {
-          "id": "4fc60972-e1b5-4d7e-9751-b0799b779665",
-          "listId": "15b4b3cd-bea5-42c2-8f80-da3692c41a8d",
-          "title": "Interfaz semanas",
+          "id": "bc3cf05d-af46-470a-9546-2fa27b3ce0c7",
+          "listId": "79d4f46c-15e4-4c8e-9873-f892f8a57d62",
+          "title": "Página Instagram",
           "description": "",
           "labels": [],
           "checkboxes": [],
           "comments": []
-        }
-      ]
-    },
-    {
-      "id": "a1b0e269-43ec-4f1e-9881-3a68362ac41c",
-      "title": "Doing",
-      "cards": [
+        },
+        {
+          "id": "267d86f7-300c-4345-86b6-210fe3a76448",
+          "listId": "79d4f46c-15e4-4c8e-9873-f892f8a57d62",
+          "title": "Pagina Facebook",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "c243164e-20ee-431e-97ca-f0647c42e398",
+          "listId": "79d4f46c-15e4-4c8e-9873-f892f8a57d62",
+          "title": "Extracción de datos de la pagina de Instagram",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
         {
           "id": "b2e92778-53c8-4438-828f-244b51e22100",
-          "listId": "a1b0e269-43ec-4f1e-9881-3a68362ac41c",
+          "listId": "79d4f46c-15e4-4c8e-9873-f892f8a57d62",
           "title": "Extracción de datos de la pagina de Facebook",
           "description": "",
           "labels": [],
@@ -44,7 +167,7 @@
         },
         {
           "id": "de462347-6d12-4d0d-8abd-954da4dc1907",
-          "listId": "a1b0e269-43ec-4f1e-9881-3a68362ac41c",
+          "listId": "79d4f46c-15e4-4c8e-9873-f892f8a57d62",
           "title": "Base de datos",
           "description": "base de datos relacional",
           "labels": [],
@@ -53,16 +176,16 @@
               "id": "a0103808-08a1-4ec0-8b08-3c920afd5281",
               "title": "estadísticas diarias",
               "checked": true
+            },
+            {
+              "id": "d860fcb9-0f5e-46a2-8ad1-627124b5fd09",
+              "title": "scrapers",
+              "checked": true
             }
           ],
           "comments": []
         }
       ]
-    },
-    {
-      "id": "79d4f46c-15e4-4c8e-9873-f892f8a57d62",
-      "title": "Done",
-      "cards": []
     }
   ],
   "archive": {

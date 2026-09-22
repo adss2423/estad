@@ -1,0 +1,181 @@
+:root {
+    --page-bg: #f4f7f6;
+    --surface: #ffffff;
+    --surface-alt: #f8fafc;
+    --text: #2b3440;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --card-shadow: rgba(0,0,0,0.03);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--page-bg);
+    color: var(--text);
+    display: flex; /* Convierte el body en un contenedor flexible */
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* --- ESTILOS DE LA BARRA LATERAL --- */
+.sidebar {
+    width: 260px;
+    background-color: var(--surface);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; /* Evita que la barra se aplaste */
+}
+.nav-link {
+    color: #64748b;
+    font-weight: 500;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 4px 16px;
+    transition: all 0.2s;
+}
+.nav-link:hover {
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+.nav-link.active {
+    background-color: #ffeeee;
+    color: #f46d6d;
+}
+
+/* --- ESTILOS DEL CONTENIDO PRINCIPAL --- */
+.main-content {
+    flex-grow: 1; /* Toma todo el espacio restante */
+    padding: 2rem 3rem;
+    overflow-y: auto;
+}
+        
+/* Estilos de las tarjetas */
+.card {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 4px 6px var(--card-shadow);
+    transition: transform 0.2s;
+    background-color: var(--surface);
+}
+.card:hover { transform: translateY(0px); }
+.icon-box {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px; border-radius: 8px; margin-right: 12px; font-size: 1.2rem;
+}
+.icon-fb { background-color: #e7f0ff; color: #0d6efd; }
+.icon-neutral { background-color: #f8f9fa; color: #6c757d; }
+.trend-up { color: #198754; font-weight: 500; font-size: 0.9rem; }
+.text-sm { font-size: 0.85rem; }
+
+.x-accent-icon,
+.x-accent-number {
+    color: #2b2b2b;
+}
+
+html[data-theme="dark"] .x-accent-icon,
+html[data-theme="dark"] .x-accent-number {
+    color: #d4d4d4 !important;
+}
+
+html[data-theme="dark"] { /* modo oscuro */
+    --page-bg: #08101b; 
+    --surface: #0c1726;
+    --surface-alt: #162a3a;
+    --text: #f8fafc;
+    --muted: #94a3b8;
+    --border: #334155;
+    --card-shadow: rgba(0,0,0,0.35);
+}
+
+html[data-theme="dark"] body {
+    background-color: var(--page-bg);
+    color: var(--text);
+}
+
+html[data-theme="dark"] .sidebar {
+    background-color: var(--surface);
+    border-right-color: var(--border);
+    color: var(--text);
+}
+
+html[data-theme="dark"] .sidebar .text-muted,
+html[data-theme="dark"] .sidebar small,
+html[data-theme="dark"] .sidebar h6 {
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .nav-link {
+    color: #cbd5e1;
+}
+
+html[data-theme="dark"] .nav-link:hover {
+    background-color: #132238;
+    color: #ffffff;
+}
+
+html[data-theme="dark"] .nav-link.active {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+html[data-theme="dark"] .nav-link.active i,
+html[data-theme="dark"] .nav-link:hover i {
+    color: inherit;
+}
+
+html[data-theme="dark"] .card {
+    background-color: var(--surface);
+    box-shadow: 0 10px 30px var(--card-shadow);
+}
+
+html[data-theme="dark"] .card h2,
+html[data-theme="dark"] .card h4,
+html[data-theme="dark"] .card h5,
+html[data-theme="dark"] .card .fw-bold,
+html[data-theme="dark"] .card .trend-up {
+    color: var(--text);
+}
+
+html[data-theme="dark"] .icon-neutral {
+    background-color: #152a3f;
+    color: #cbd5e1;
+}
+
+html[data-theme="dark"] .icon-fb {
+    background-color: rgba(13,110,253,0.15);
+    color: #7fb1ff;
+}
+
+html[data-theme="dark"] .card .text-muted {
+    color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .bg-white {
+    background-color: #0f1724 !important;
+    border-color: #334155 !important;
+    color: var(--text) !important;
+}
+
+html[data-theme="dark"] .bg-light {
+    background-color: #14243a !important;
+    color: var(--text) !important;
+}
+
+html[data-theme="dark"] .border {
+    border-color: #334155 !important;
+}
+
+html[data-theme="dark"] .text-muted {
+    color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .btn-outline-secondary {
+    color: #cbd5e1;
+    border-color: #334155;
+}
+
+html[data-theme="dark"] .btn-outline-secondary:hover {
+    background-color: rgba(203,213,225,0.08);
+}
+
